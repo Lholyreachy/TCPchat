@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using SimpleTCP;
+using System.Net;
 
 namespace TCPchat
 {
@@ -19,10 +14,7 @@ namespace TCPchat
         }
 
         SimpleTcpServer server;
-
-
    
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -44,21 +36,12 @@ namespace TCPchat
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            System.Net.IPAddress ip = new System.Net.IPAddress(long.Parse(txtHost.Text));
+            txtStatus.Text += "Server starting...";
+            IPAddress ip = IPAddress.Parse("127.0.0.1");
+            // System.Net.IPAddress ip = new System.Net.IPAddress(long.Parse(txtHost.Text));
             server.Start(ip, Convert.ToInt32(txtPort.Text));
-            //try {
-            //     txtStatus.Text += "Server starting...";
 
-            // }
-
-            // catch
-            // {
-            //     System.Net.IPAddress ip = new System.Net.IPAddress(long.Parse(txtHost.Text));
-            //     server.Start(ip, Convert.ToInt32(txtPort.Text));
-            // }
-
-
-
+            //IPAddress ip = IPAddress.Parse("127.0.0.1");
         }
 
         private void btnStop_Click(object sender, EventArgs e)

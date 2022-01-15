@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCPchat", "TCPchat\TCPchat.csproj", "{D345D5E9-A1AA-4A68-BDED-FCBCE53492A7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{D2DA376F-F52F-48D2-9912-315A2E4B5D5E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D345D5E9-A1AA-4A68-BDED-FCBCE53492A7} = {D345D5E9-A1AA-4A68-BDED-FCBCE53492A7}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
