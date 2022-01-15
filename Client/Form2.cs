@@ -42,7 +42,6 @@ namespace Client
             client.Connect(txtHost.Text, Convert.ToInt32(txtPort.Text));
         }
       
-        
         public void btnSend_Click(object sender, EventArgs e)
         {
 
